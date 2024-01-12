@@ -33,9 +33,13 @@ SUITE_EXTERN(suite_input);
 GREATEST_MAIN_DEFS();
 
 int main(int argc, char *argv[]) {
-        char *prog = realpath(argv[0], NULL);
+        const char *try_files[] = {"test/test.c", "test.c", argv[0], NULL};
+        char *prog = NULL;
+        for (const char **file = try_files; *file && !prog; ++file) {
+                prog = realpath(*file, NULL);
+        }
         if (!prog) {
-                fprintf(stderr, "Cannot determine actual path of test executable: %s\n", strerror(errno));
+                fprintf(stderr, "Cannot determine path of test data: %s\n", strerror(errno));
                 exit(1);
         }
         base = dirname(prog);

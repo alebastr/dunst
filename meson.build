@@ -60,7 +60,7 @@ configure_file(
 )
 
 if systemd.found()
-	user_units_dir = systemd.get_pkgconfig_variable('systemduserunitdir')
+	user_units_dir = systemd.get_variable(pkgconfig: 'systemduserunitdir')
 	configure_file(
 		configuration: conf_data,
 		input: 'dunst.systemd.service.in',
