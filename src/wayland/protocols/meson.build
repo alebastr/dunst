@@ -6,7 +6,7 @@ wayland_scanner_prog = find_program(wayland_scanner_path, native: true)
 
 wayland_scanner_code = generator(
 	wayland_scanner_prog,
-	output: '@BASENAME@.h',
+	output: '@BASENAME@.c',
 	arguments: ['private-code', '@INPUT@', '@OUTPUT@'],
 )
 

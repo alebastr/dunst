@@ -38,6 +38,7 @@ ifeq (0,${WAYLAND})
 SRC := $(sort $(shell ${FIND} src/ -not \( -path src/wayland -prune \) -name '*.c'))
 else
 # with Wayland support
+CFLAGS += -Isrc/wayland/protocols
 SRC := $(sort $(shell ${FIND} src/ -name '*.c'))
 endif
 OBJ := ${SRC:.c=.o}

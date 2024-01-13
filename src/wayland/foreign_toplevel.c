@@ -2,8 +2,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
-#include "protocols/wlr-foreign-toplevel-management-unstable-v1-client-header.h"
-/* #include "protocols/wlr-foreign-toplevel-management-unstable-v1.h" */
+#include "wlr-foreign-toplevel-management-unstable-v1-client-header.h"
 
 #include "foreign_toplevel.h"
 #include "../dunst.h"

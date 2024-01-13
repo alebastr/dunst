@@ -18,14 +18,10 @@
 #include <string.h>
 #include <glib.h>
 
-#include "protocols/xdg-shell-client-header.h"
-#include "protocols/xdg-shell.h"
-#include "protocols/wlr-layer-shell-unstable-v1-client-header.h"
-#include "protocols/wlr-layer-shell-unstable-v1.h"
-#include "protocols/wlr-foreign-toplevel-management-unstable-v1-client-header.h"
-#include "protocols/wlr-foreign-toplevel-management-unstable-v1.h"
-#include "protocols/idle-client-header.h"
-#include "protocols/idle.h"
+#include "xdg-shell-client-header.h"
+#include "wlr-layer-shell-unstable-v1-client-header.h"
+#include "wlr-foreign-toplevel-management-unstable-v1-client-header.h"
+#include "idle-client-header.h"
 #include "pool-buffer.h"
 
 
